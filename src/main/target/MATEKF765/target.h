@@ -138,6 +138,10 @@
 #define UART4_TX_PIN            PD1
 #define UART4_RX_PIN            PD0
 
+#define USE_UART5
+#define UART5_TX_PIN            NONE //No TX5 pad
+#define UART5_RX_PIN            PB8
+
 #define USE_UART6
 #define UART6_TX_PIN            PC6
 #define UART6_RX_PIN            PC7
@@ -150,13 +154,11 @@
 #define UART8_TX_PIN            PE1
 #define UART8_RX_PIN            PE0
 
-/*
 #define USE_SOFTSERIAL1
-#define SOFTSERIAL_1_TX_PIN      PA2
-#define SOFTSERIAL_1_RX_PIN      PA2
-*/
+#define SOFTSERIAL_1_TX_PIN      PC6  //TX6
+#define SOFTSERIAL_1_RX_PIN      PC6  
 
-#define SERIAL_PORT_COUNT       8
+#define SERIAL_PORT_COUNT       10
 
 #define DEFAULT_RX_TYPE         RX_TYPE_SERIAL
 #define SERIALRX_PROVIDER       SERIALRX_SBUS
@@ -193,7 +195,7 @@
 #define USE_LED_STRIP
 #define WS2811_PIN                  PA8
 
-#define DEFAULT_FEATURES            (FEATURE_OSD | FEATURE_TELEMETRY | FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TX_PROF_SEL | FEATURE_BLACKBOX)
+#define DEFAULT_FEATURES            (FEATURE_OSD | FEATURE_TELEMETRY | FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TX_PROF_SEL | FEATURE_BLACKBOX | FEATURE_SOFTSERIAL)
 #define CURRENT_METER_SCALE         250
 
 #define USE_SERIAL_4WAY_BLHELI_INTERFACE
@@ -204,6 +206,6 @@
 #define TARGET_IO_PORTD 0xffff
 #define TARGET_IO_PORTE 0xffff
 
-#define MAX_PWM_OUTPUT_PORTS        15
+#define MAX_PWM_OUTPUT_PORTS        16
 #define USE_DSHOT
 #define USE_SERIALSHOT
